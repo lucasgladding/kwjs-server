@@ -2,7 +2,9 @@ import { HttpModule, HttpService } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { of } from 'rxjs';
 
+import { Event } from './event';
 import { EventsService } from './events.service';
+
 import { createAxiosResponse } from '../../test-helpers/http-service';
 
 describe('EventsService', () => {
@@ -20,9 +22,11 @@ describe('EventsService', () => {
   });
 
   it('should return an array of events', (done) => {
-    const expected = ['event'];
-    const response = createAxiosResponse(expected);
+    const fixture = require('./fixtures/meetup.events.json');
+    const response = createAxiosResponse(fixture);
     jest.spyOn(http, 'get').mockImplementationOnce(() => of(response));
+
+    const expected = fixture.map(Event.decode);
     service.list().subscribe(actual => {
       expect(actual).toEqual(expected);
       done();

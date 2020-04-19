@@ -21,8 +21,9 @@ describe('EventsController', () => {
   });
 
   it('should return an array of events', (done) => {
-    const expected = ['event'];
+    const expected = require('./fixtures/events');
     jest.spyOn(service, 'list').mockImplementationOnce(() => of(expected));
+
     controller.list().subscribe(actual => {
       expect(actual).toEqual(expected);
       done();
