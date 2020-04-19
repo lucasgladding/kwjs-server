@@ -9,6 +9,7 @@ describe('Event', () => {
     expect(event.name).toEqual(fixture[0].name);
     expect(event.description).toEqual(fixture[0].description);
     expect(event.starts_at).toEqual(new Date(fixture[0].time));
+    expect(event.ends_at).toEqual(new Date(fixture[0].time + fixture[0].duration));
     expect(event.duration).toEqual(fixture[0].duration);
   });
 });
