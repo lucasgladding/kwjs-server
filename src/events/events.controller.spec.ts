@@ -1,5 +1,5 @@
 import { HttpModule } from '@nestjs/common';
-import { Test, TestingModule } from '@nestjs/testing';
+import { Test } from '@nestjs/testing';
 import { of } from 'rxjs';
 
 import { EventsService } from './events.service';
@@ -10,7 +10,7 @@ describe('EventsController', () => {
   let controller: EventsController;
 
   beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
+    const module = await Test.createTestingModule({
       imports: [HttpModule],
       controllers: [EventsController],
       providers: [EventsService],
