@@ -6,6 +6,6 @@ export function createAxiosResponse<T>(data: T): AxiosResponse<T> {
     data,
     headers: {},
     status: 200,
-    statusText: "OK",
+    statusText: 'OK',
   };
 }
