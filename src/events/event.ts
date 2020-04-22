@@ -4,6 +4,7 @@ export class Event {
   starts_at: Date;
   ends_at: Date;
   duration: number;
+  attendees_count: number;
 
   constructor(data: any) {
     this.name = data.name;
@@ -11,6 +12,7 @@ export class Event {
     this.starts_at = data.starts_at;
     this.ends_at = data.ends_at;
     this.duration = data.duration;
+    this.attendees_count = data.attendees_count;
   }
 
   static decode(data: any): Event {
@@ -20,6 +22,7 @@ export class Event {
       starts_at: new Date(data.time),
       ends_at: new Date(data.time + data.duration),
       duration: data.duration,
+      attendees_count: data.yes_rsvp_count,
     });
   }
 }

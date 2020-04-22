@@ -11,5 +11,6 @@ describe('Event', () => {
     expect(event.starts_at).toEqual(new Date(fixture[0].time));
     expect(event.ends_at).toEqual(new Date(fixture[0].time + fixture[0].duration));
     expect(event.duration).toEqual(fixture[0].duration);
+    expect(event.attendees_count).toEqual(fixture[0].yes_rsvp_count);
   });
 });
