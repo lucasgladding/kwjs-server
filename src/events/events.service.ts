@@ -9,7 +9,11 @@ export class EventsService {
   constructor(private http: HttpService) {}
 
   list(): Observable<Event[]> {
-    return this.http.get<Event[]>('events')
+    return this.http.get<Event[]>('events', {
+      params: {
+        fields: 'plain_text_description',
+      },
+    })
       .pipe(
         map(response => response.data.map(Event.decode))
       );

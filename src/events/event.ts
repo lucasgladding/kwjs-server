@@ -18,7 +18,7 @@ export class Event {
   static decode(data: any): Event {
     return new Event({
       name: data.name,
-      description: data.description,
+      description: data.plain_text_description,
       starts_at: new Date(data.time),
       ends_at: new Date(data.time + data.duration),
       duration: data.duration,

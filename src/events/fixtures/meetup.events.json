@@ -13,7 +13,7 @@
     "updated": 1587320304000,
     "utc_offset": -14400000,
     "waitlist_count": 0,
-    "yes_rsvp_count": 47,
+    "yes_rsvp_count": 58,
     "venue": {
       "id": 26906060,
       "name": "Online event",
@@ -41,6 +41,7 @@
     "description": "<p>Join us this month (virtually) as Lucas Gladding speaks about mobile application development using React Native. We'll be building an application in TypeScript, and including some component tests using Jest and React Native Testing Library.</p> <p>Don't forget, we'll be raffling for a 1 year subscription to any JetBrains product at every meetup!</p> <p>Stay tuned for more details as we get closer to the meetup. Hoping all of you have been well during this time, and we look forward to seeing you! :)</p> <p>Agenda:<br/>7pm - 7:30pm: Presentation<br/>7:30pm - 8pm: Online Networking! (We'll explain how)</p> ",
     "how_to_find_us": "meet.google.com/aon-ymrc-zxh",
     "visibility": "public",
-    "member_pay_fee": false
+    "member_pay_fee": false,
+    "plain_text_description": "Join us this month (virtually) as Lucas Gladding speaks about mobile application development using React Native. We'll be building an application in TypeScript, and including some component tests using Jest and React Native Testing Library.\n\nDon't forget, we'll be raffling for a 1 year subscription to any JetBrains product at every meetup!\n\nStay tuned for more details as we get closer to the meetup. Hoping all of you have been well during this time, and we look forward to seeing you! :)\n\nAgenda:\n7pm - 7:30pm: Presentation\n7:30pm - 8pm: Online Networking! (We'll explain how)"
   }
 ]
