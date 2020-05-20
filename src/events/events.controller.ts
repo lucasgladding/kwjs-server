@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import {Controller, Get, Param} from '@nestjs/common';
 import { Observable } from 'rxjs';
 
 import { Event } from './event';
@@ -11,5 +11,10 @@ export class EventsController {
   @Get()
   list(): Observable<Event[]> {
     return this.service.list();
+  }
+
+  @Get(':id')
+  get(@Param('id') id): Observable<Event> {
+    return this.service.get(id);
   }
 }

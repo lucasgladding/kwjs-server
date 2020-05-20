@@ -29,4 +29,14 @@ describe('EventsController', () => {
       done();
     });
   });
+
+  it('should return an event', (done) => {
+    const expected = require('./fixtures/events')[0];
+    jest.spyOn(service, 'get').mockImplementationOnce(() => of(expected));
+
+    controller.get(1).subscribe(actual => {
+      expect(actual).toEqual(expected);
+      done();
+    });
+  });
 });

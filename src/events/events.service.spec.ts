@@ -32,4 +32,16 @@ describe('EventsService', () => {
       done();
     });
   });
+
+  it('should return an event', (done) => {
+    const fixture = require('./fixtures/meetup.events.id.json');
+    const response = createAxiosResponse(fixture);
+    jest.spyOn(http, 'get').mockImplementationOnce(() => of(response));
+
+    const expected = Event.decode(fixture);
+    service.get(1).subscribe(actual => {
+      expect(actual).toEqual(expected);
+      done();
+    });
+  });
 });
