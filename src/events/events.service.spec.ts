@@ -39,7 +39,7 @@ describe('EventsService', () => {
     jest.spyOn(http, 'get').mockImplementationOnce(() => of(response));
 
     const expected = Event.decode(fixture);
-    service.get(1).subscribe(actual => {
+    service.get('1').subscribe(actual => {
       expect(actual).toEqual(expected);
       done();
     });

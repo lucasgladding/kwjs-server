@@ -21,7 +21,7 @@ export class EventsService {
       );
   }
 
-  get(id: number): Observable<Event> {
+  get(id: string): Observable<Event> {
     return this.http.get<Event>(`events/${id}`, {
       params: {
         fields: 'plain_text_description',
